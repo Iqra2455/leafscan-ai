@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Leaf } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
   return (
@@ -24,12 +25,15 @@ export function Navbar() {
             How it works
           </a>
         </nav>
-        <a
-          href="#upload"
-          className="rounded-xl bg-gradient-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-soft transition-smooth hover:shadow-glow hover:-translate-y-0.5"
-        >
-          Try free
-        </a>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <a
+            href="#upload"
+            className="rounded-xl bg-gradient-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-soft transition-smooth hover:shadow-glow hover:-translate-y-0.5"
+          >
+            Try free
+          </a>
+        </div>
       </div>
     </header>
   );
